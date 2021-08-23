@@ -1,100 +1,102 @@
 import React from "react";
+import { Box, Link, Image, UnorderedList, ListItem, Text } from "@chakra-ui/react";
+
 export default () => {
   return (
     <footer>
-      <div className="container">
+      <Box className="container">
         <nav>
-          <ul>
-            <li>
+          <UnorderedList>
+            <ListItem>
               <a href="legal/privacy/index.htm">Privacy</a>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <a href="legal/terms/index.htm">Terms</a>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <a href="legal/billing/index.htm">Billing</a>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <a href="legal/aup/index.htm">AUP</a>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <a href="legal/copyright/index.htm">Copyright</a>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <a href="contact/index.htm">Contact</a>
-            </li>
-          </ul>
+            </ListItem>
+          </UnorderedList>
         </nav>
-        <div className="soc_wrap">
-          <ul>
-            <li>
+        <Box className="soc_wrap">
+          <UnorderedList>
+            <ListItem>
               <a className="ci ci-facebook" title="Facebook" href="Camgo-206187749833806/index.htm" target="_blank"></a>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <a className="ci ci-instagram" title="Instagram" href="camgochat/index.htm" target="_blank"></a>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <a className="ci ci-twitter" title="Twitter" href="followcamgo.html" target="_blank"></a>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <a
                 className="ci ci-youtube-play"
                 title="Youtube"
                 href="channel/UC9yQ8vd6J3zDY-P__eB04AA.html"
                 target="_blank"
               ></a>
-            </li>
-          </ul>
-        </div>
-        <div className="footer-langs">
+            </ListItem>
+          </UnorderedList>
+        </Box>
+        <Box className="footer-langs">
           <span data-lang="en">
             {" "}
             English <em className="ci ci-arrow-light"></em>
           </span>
-          <div className="fl-list">
+          <Box className="fl-list">
             <nav>
-              <ul>
-                <li className="fll-chse">Choose Your Language</li>
-                <li>
+              <UnorderedList>
+                <ListItem className="fll-chse">Choose Your Language</ListItem>
+                <ListItem>
                   <a data-lang="es" href="index-1.htm">
                     Español
                   </a>
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <a data-lang="de" href="index-2.htm">
                     Deutsch
                   </a>
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <a data-lang="fr" href="index-3.htm">
                     Français
                   </a>
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <a data-lang="it" href="index-4.htm">
                     Italiano
                   </a>
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <a data-lang="pt" href="index-5.htm">
                     Portuguęs
                   </a>
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <a data-lang="ru" href="index-6.htm">
                     Русский
                   </a>
-                </li>
-                <li aria-hidden="true" className="fll-close"></li>
-              </ul>
+                </ListItem>
+                <ListItem aria-hidden="true" className="fll-close"></ListItem>
+              </UnorderedList>
             </nav>
-            <div className="fll-bg"></div>
-          </div>
-        </div>
-        <div className="copy_wrap">
+            <Box className="fll-bg"></Box>
+          </Box>
+        </Box>
+        <Box className="copy_wrap">
           <p>&copy; Camgo 2021</p>
-        </div>
-      </div>
+        </Box>
+      </Box>
     </footer>
   );
 };

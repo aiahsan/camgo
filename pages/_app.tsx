@@ -38,10 +38,15 @@ const theme = extendTheme({
   colors: {
     background: {
       100: "#1b2229",
+      200: "#222",
     },
     theme: {
       100: "#05d1c4",
       200: "#04aca1",
+    },
+    gry: {
+      100: "#e2e2e2",
+      200: "#cfcfcf",
     },
   },
   styles: {
@@ -74,7 +79,7 @@ const theme = extendTheme({
         flex: "1 0 auto",
         width: "100%",
       },
-      a: { color: "#05D1C4" },
+      a: { color: "theme.100" },
       p: { margin: "0 0 10px" },
       ul: { margin: "0", padding: "0" },
       "ul li": { listStyleType: "none" },
@@ -89,22 +94,22 @@ const theme = extendTheme({
       ".img-responsive": { display: "block", maxWidth: "100%", height: "auto" },
       ".text-center": { textAlign: "center" },
       ".btn": { cursor: "pointer", display: "inline-block", outline: "none" },
-      ".grey-btn": { background: "#e2e2e2", color: "#222" },
-      ".grey-btn:hover": { background: "#cfcfcf" },
-      ".green-btn": { background: "#05D1C4", color: "#fff" },
+      ".grey-btn": { background: "gry.100", color: "background.200" },
+      ".grey-btn:hover": { background: "gry.200" },
+      ".green-btn": { background: "theme.100", color: "#fff" },
       ".green-btn:hover": { background: "#04b8ad" },
       ".green-btn:disabled": { background: "#06f6e7" },
       ".red-btn": { background: "#E94241", color: "#fff" },
       ".red-btn:hover": { background: "#e5201f", color: "#fff" },
       ".red-btn:disabled": { background: "#ed6463" },
-      ".green-text": { color: "#05D1C4" },
+      ".green-text": { color: "theme.100" },
       ".infographic-wrapper": { position: "relative", overflow: "hidden" },
-      ".infographic-wrapper section:nth-child(even)": {
+      ".infographic-wrapper section:nth-of-type(even)": {
         background: "#fff url(assets/img/cross-bg.svg)",
         backgroundSize: "175px",
         padding: "30px 0 40px",
       },
-      ".infographic-wrapper section:nth-child(even) .container": {
+      ".infographic-wrapper section:nth-of-type(even) .container": {
         WebkitBoxOrient: "unset",
         WebkitBoxDirection: "unset",
         msFlexDirection: "unset",
@@ -112,7 +117,7 @@ const theme = extendTheme({
       },
       ".infographic-wrapper .container": { msFlexWrap: "wrap", flexWrap: "wrap" },
       ".infographic-wrapper h1,\n.infographic-wrapper h2,\n.infographic-wrapper h3": {
-        color: "#05D1C4",
+        color: "theme.100",
         marginTop: "0",
       },
       ".infographic-wrapper h1 span,\n.infographic-wrapper h2 span,\n.infographic-wrapper h3 span": {
@@ -121,12 +126,12 @@ const theme = extendTheme({
         fontWeight: 400,
       },
       ".video-dating": {
-        background: "#1b2229",
+        background: "background.100",
         color: "#fff",
         padding: "45px 0 105px",
       },
       ".video-dating .container": { msFlexWrap: "wrap", flexWrap: "wrap" },
-      ".vd-title": { width: "100%" },
+      ".vd-title": { width: "100%", marginTop: "5%" },
       ".vd-title h1": {
         fontSize: "2.75em",
         fontFamily: '"SFProRounded", sans-serif',
@@ -172,7 +177,7 @@ const theme = extendTheme({
         zIndex: 1,
       },
       ".vdw-score strong": {
-        color: "#05D1C4",
+        color: "theme.100",
         fontFamily: '"SFProRounded", sans-serif',
         fontSize: "4.2em",
         letterSpacing: "0.075em",
@@ -219,24 +224,24 @@ const theme = extendTheme({
         height: "2.3em",
         width: "2.3em",
       },
-      ".vdw-list li:nth-child(1)::before": {
+      ".vdw-list li:nth-of-type(1)::before": {
         backgroundImage: "url(assets/img/icon-1.svg)",
       },
-      ".vdw-list li:nth-child(2)::before": {
+      ".vdw-list li:nth-of-type(2)::before": {
         backgroundImage: "url(assets/img/icon-2.svg)",
       },
-      ".vdw-list li:nth-child(3)::before": {
+      ".vdw-list li:nth-of-type(3)::before": {
         backgroundImage: "url(assets/img/icon-3.svg)",
       },
-      ".vdw-list li:nth-child(4)::before": {
+      ".vdw-list li:nth-of-type(4)::before": {
         backgroundImage: "url(assets/img/icon-4.svg)",
       },
-      ".vdw-list li:nth-child(5)::before": {
+      ".vdw-list li:nth-of-type(5)::before": {
         backgroundImage: "url(assets/img/icon-5.svg)",
       },
-      ".vdw-list li span": { color: "#05D1C4", marginLeft: "0.25em" },
+      ".vdw-list li span": { color: "theme.100", marginLeft: "0.25em" },
       "header ": {
-        backgroundColor: "#05D1C4",
+        backgroundColor: "theme.100",
         position: "fixed",
         top: "0",
         height: "55px",
@@ -260,9 +265,9 @@ const theme = extendTheme({
         width: "150px",
       },
       "@media only screen and (min-width: 1500px)": {
-        ".home-welcone.container": { maxWidth: "1230px" },
-        ".app-intro": { fontSize: "15px" },
-        ".intro-content:before": { height: "710px" },
+        ".home-welcone.container": { maxWidth: "1230px!important" },
+        ".app-intro": { fontSize: "15px!important" },
+        ".intro-content:before": { height: "710px!important" },
         ".ic-form": { padding: "0 1em" },
         ".ic-start": { marginTop: "1.75em" },
         ".ic-start .ics-btn": { marginTop: "2em" },
@@ -294,7 +299,7 @@ const theme = extendTheme({
       },
       ".ft-content h2 span": { display: "block" },
       ".ft-content p": { fontSize: "1.45em" },
-      ".iw-features": { background: "#05D1C4", padding: "0" },
+      ".iw-features": { background: "theme.100", padding: "0" },
       ".iw-features p": {
         fontSize: "1.4em",
         maxWidth: "90%",
@@ -356,6 +361,10 @@ const theme = extendTheme({
         padding: "0.1em 0",
         textShadow: "1px 0px",
       },
+      ".gender-selected label": {
+        display: "flex!important",
+        alignItems: "center",
+      },
       ".interest-based .container": { position: "static" },
       ".interest-based .container:after": {
         content: "''",
@@ -390,7 +399,7 @@ const theme = extendTheme({
       ".head-logo img": { width: "100%", height: "auto" },
       ".head-mnu": {
         background: "#fff",
-        borderLeft: "1px solid #1b2229",
+        borderLeft: "1px solid background.100",
         display: ["-webkit-box", "-ms-flexbox", "flex"],
         WebkitBoxOrient: "vertical",
         WebkitBoxDirection: "normal",
@@ -419,7 +428,7 @@ const theme = extendTheme({
       },
       ".head-mnu li": { display: "block", textAlign: "center" },
       ".head-mnu li a": {
-        color: "#1b2229",
+        color: "background.100",
         display: "block",
         fontSize: "17px",
         fontWeight: 600,
@@ -429,7 +438,7 @@ const theme = extendTheme({
         WebkitTransition: "all 0.25s ease",
         transition: "all 0.25s ease",
       },
-      ".head-mnu li a:hover": { color: "#05D1C4" },
+      ".head-mnu li a:hover": { color: "theme.100" },
       ".head-mnu li:last-child": {
         WebkitBoxFlex: "1",
         msFlex: "auto",
@@ -447,10 +456,10 @@ const theme = extendTheme({
         fontSize: "15px",
         margin: "auto 0 0",
       },
-      ".head-mnu li:last-child p:hover": { color: "#05D1C4" },
+      ".head-mnu li:last-child p:hover": { color: "theme.100" },
       ".head-mnu li:last-child p em": { fontSize: "1.25em", marginRight: "5px" },
       ".head-mnu li .get-plus": {
-        background: "#05D1C4",
+        background: "theme.100",
         borderRadius: "50px",
         color: "#fff",
         cursor: "pointer",
@@ -465,9 +474,9 @@ const theme = extendTheme({
         padding: "0.3em 0.75em",
       },
       ".head-mnu li .get-plus span": {
-        background: "#1b2229",
+        background: "background.100",
         borderRadius: "50px",
-        color: "#05D1C4",
+        color: "theme.100",
       },
       ".head-mnu li .get-plus em": {
         fontStyle: "normal",
@@ -503,6 +512,8 @@ const theme = extendTheme({
         fontWeight: 600,
         marginRight: "20px",
         textShadow: "0 0 0",
+        display: "flex",
+        alignItems: "center",
       },
       ".head-count em": {
         fontSize: "1.4em",
@@ -535,21 +546,21 @@ const theme = extendTheme({
         height: "4px",
         width: "100%",
       },
-      ".head-toggle span:nth-child(1)": { top: "0px" },
-      ".head-toggle span:nth-child(2), .head-toggle span:nth-child(3)": {
+      ".head-toggle span:nth-of-type(1)": { top: "0px" },
+      ".head-toggle span:nth-of-type(2), .head-toggle span:nth-of-type(3)": {
         top: "11px",
       },
-      ".head-toggle span:nth-child(4)": { top: "22px" },
-      ".nav-open .head-toggle span:nth-child(4), .nav-open .head-toggle span:nth-child(1)": {
+      ".head-toggle span:nth-of-type(4)": { top: "22px" },
+      ".nav-open .head-toggle span:nth-of-type(4), .nav-open .head-toggle span:nth-of-type(1)": {
         top: "11px",
         width: "0%",
         left: "50%",
       },
-      ".nav-open .head-toggle span:nth-child(2)": {
+      ".nav-open .head-toggle span:nth-of-type(2)": {
         WebkitTransform: "rotate(45deg)",
         transform: "rotate(45deg)",
       },
-      ".nav-open .head-toggle span:nth-child(3)": {
+      ".nav-open .head-toggle span:nth-of-type(3)": {
         WebkitTransform: "rotate(-45deg)",
         transform: "rotate(-45deg)",
       },
@@ -559,12 +570,13 @@ const theme = extendTheme({
         transition: "right 0.5s ease",
       },
       ".app-intro": {
-        background: "#1b2229",
+        background: "background.100",
         fontSize: "12px",
         fontFamily: '"SFProRounded", sans-serif',
         position: "relative",
         overflow: "hidden",
         height: "100%",
+        paddingTop: "7.1%",
       },
       ".home-welcone": {
         display: ["-webkit-box", "-ms-flexbox", "flex"],
@@ -573,6 +585,7 @@ const theme = extendTheme({
         alignItems: "center",
         height: "100%",
         opacity: 0,
+        paddingBottom: "7%",
       },
       ".intro-content": {
         maxWidth: "38.5em",
@@ -603,9 +616,9 @@ const theme = extendTheme({
         WebkitTransition: "all .25s ease",
         transition: "all .25s ease",
       },
-      ".ic-top p a:hover": { color: "#04aca1" },
+      ".ic-top p a:hover": { color: "theme.200" },
       ".ic-select": {
-        color: "#1b2229",
+        color: "background.100",
         fontSize: "1.8em",
         fontWeight: 600,
         margin: "0 auto",
@@ -633,7 +646,7 @@ const theme = extendTheme({
       ".ic-select>span:hover": { color: "#1dc4ba" },
       ".ic-select>span:after": {
         content: '"\\E809"',
-        color: "#05D1C4",
+        color: "theme.100",
         fontSize: "0.75em",
         fontFamily: "CamgoIcons",
         position: "absolute",
@@ -656,7 +669,7 @@ const theme = extendTheme({
       ".ic-select ul li input": { display: "none" },
       ".ic-select ul li label": {
         borderTop: "1px solid #dfe7ed",
-        color: "#1b2229",
+        color: "background.100",
         cursor: "pointer",
         display: "block",
         marginBottom: "7px",
@@ -664,7 +677,7 @@ const theme = extendTheme({
         padding: "10px 5px",
         whiteSpace: "nowrap",
       },
-      ".ic-select ul li label:hover": { color: "#05D1C4" },
+      ".ic-select ul li label:hover": { color: "theme.100" },
       ".ic-select ul li label em": { margin: "0 0.25em" },
       ".ic-start": { marginTop: "1.5em" },
       ".ic-start strong": {
@@ -692,7 +705,7 @@ const theme = extendTheme({
       },
       ".ic-start strong em:before": { opacity: 0.5, top: "0" },
       ".ic-start strong em:after": { content: '"\\E809"', top: "0.3em" },
-      ".ic-start strong em:first-child": { marginRight: "1.5em" },
+      ".ic-start strong em:first-of-type": { marginRight: "1.5em" },
       ".ic-start strong em:last-child": { marginLeft: "1.5em" },
       ".ic-start strong.animate em:after,.ic-start strong.animate em:before": {
         WebkitAnimation: "arrow-down 1s linear infinite",
@@ -720,7 +733,7 @@ const theme = extendTheme({
       },
       ".ic-start .ics-btn .btn": {
         borderRadius: "0.35em",
-        color: "#1b2229",
+        color: "background.100",
         fontSize: "2.1em",
         fontWeight: 600,
         padding: "0.435em 20px",
@@ -742,7 +755,7 @@ const theme = extendTheme({
         WebkitTransform: "scale(1)",
         transform: "scale(1)",
       },
-      ".ic-cont input:checked+label:before": { background: "#05D1C4" },
+      ".ic-cont input:checked+label:before": { background: "theme.100" },
       ".ic-cont label": {
         cursor: "pointer",
         fontSize: "1.05em",
@@ -760,7 +773,7 @@ const theme = extendTheme({
         WebkitTransition: "color .25s ease",
         transition: "color .25s ease",
       },
-      ".ic-cont label a:hover": { color: "#05D1C4" },
+      ".ic-cont label a:hover": { color: "theme.100" },
       ".ic-cont label:before,.ic-cont label:after": {
         content: '""',
         position: "absolute",
@@ -839,12 +852,12 @@ const theme = extendTheme({
         width: "100%",
       },
       ".ic-interests .ici-area input::-ms-clear": { display: "none" },
-      ".ic-interests .ici-area input::-moz-selection": { background: "#05D1C4" },
-      ".ic-interests .ici-area input::selection": { background: "#05D1C4" },
+      ".ic-interests .ici-area input::-moz-selection": { background: "theme.100" },
+      ".ic-interests .ici-area input::selection": { background: "theme.100" },
       ".ic-interests .ici-area span": {
-        background: "#05D1C4",
+        background: "theme.100",
         borderRadius: "6px",
-        color: "#1b2229",
+        color: "background.100",
         cursor: "pointer",
         display: "inline-block",
         WebkitBoxFlex: "1",
@@ -922,7 +935,7 @@ const theme = extendTheme({
         background: "#f4f4f4",
       },
       ".ic-interests .ici-available span.active::before,.ic-interests .ici-available span:hover::before": {
-        color: "#1b2229",
+        color: "background.100",
       },
       ".ic-interests .ici-available span:before": {
         content: '"\\e807"',
@@ -957,7 +970,7 @@ const theme = extendTheme({
       },
       "#app-loading": {
         display: "none",
-        background: "#1b2229",
+        background: "background.100",
         position: "absolute",
         top: "0",
         left: "0",
@@ -996,7 +1009,7 @@ const theme = extendTheme({
 
       "@media only screen and (max-width: 1024px)": {
         ".app-intro": {
-          background: "#1b2229",
+          background: "background.100",
           fontSize: "12px",
           fontFamily: '"SFProRounded", sans-serif',
           position: "relative",
@@ -1040,9 +1053,9 @@ const theme = extendTheme({
           WebkitTransition: "all .25s ease",
           transition: "all .25s ease",
         },
-        ".ic-top p a:hover": { color: "#04aca1" },
+        ".ic-top p a:hover": { color: "theme.200" },
         ".ic-select": {
-          color: "#1b2229",
+          color: "background.100",
           fontSize: "1.8em",
           fontWeight: 600,
           margin: "0 auto",
@@ -1070,7 +1083,7 @@ const theme = extendTheme({
         ".ic-select>span:hover": { color: "#1dc4ba" },
         ".ic-select>span:after": {
           content: '"\\E809"',
-          color: "#05D1C4",
+          color: "theme.100",
           fontSize: "0.75em",
           fontFamily: "CamgoIcons",
           position: "absolute",
@@ -1093,7 +1106,7 @@ const theme = extendTheme({
         ".ic-select ul li input": { display: "none" },
         ".ic-select ul li label": {
           borderTop: "1px solid #dfe7ed",
-          color: "#1b2229",
+          color: "background.100",
           cursor: "pointer",
           display: "block",
           marginBottom: "7px",
@@ -1101,7 +1114,7 @@ const theme = extendTheme({
           padding: "10px 5px",
           whiteSpace: "nowrap",
         },
-        ".ic-select ul li label:hover": { color: "#05D1C4" },
+        ".ic-select ul li label:hover": { color: "theme.100" },
         ".ic-select ul li label em": { margin: "0 0.25em" },
         ".ic-start": { marginTop: "1.5em" },
         ".ic-start strong": {
@@ -1129,7 +1142,7 @@ const theme = extendTheme({
         },
         ".ic-start strong em:before": { opacity: 0.5, top: "0" },
         ".ic-start strong em:after": { content: '"\\E809"', top: "0.3em" },
-        ".ic-start strong em:first-child": { marginRight: "1.5em" },
+        ".ic-start strong em:first-of-type": { marginRight: "1.5em" },
         ".ic-start strong em:last-child": { marginLeft: "1.5em" },
         ".ic-start strong.animate em:after,.ic-start strong.animate em:before": {
           WebkitAnimation: "arrow-down 1s linear infinite",
@@ -1157,7 +1170,7 @@ const theme = extendTheme({
         },
         ".ic-start .ics-btn .btn": {
           borderRadius: "0.35em",
-          color: "#1b2229",
+          color: "background.100",
           fontSize: "2.1em",
           fontWeight: 600,
           padding: "0.435em 20px",
@@ -1179,7 +1192,7 @@ const theme = extendTheme({
           WebkitTransform: "scale(1)",
           transform: "scale(1)",
         },
-        ".ic-cont input:checked+label:before": { background: "#05D1C4" },
+        ".ic-cont input:checked+label:before": { background: "theme.100" },
         ".ic-cont label": {
           cursor: "pointer",
           fontSize: "1.05em",
@@ -1197,7 +1210,7 @@ const theme = extendTheme({
           WebkitTransition: "color .25s ease",
           transition: "color .25s ease",
         },
-        ".ic-cont label a:hover": { color: "#05D1C4" },
+        ".ic-cont label a:hover": { color: "theme.100" },
         ".ic-cont label:before,.ic-cont label:after": {
           content: '""',
           position: "absolute",
@@ -1276,12 +1289,12 @@ const theme = extendTheme({
           width: "100%",
         },
         ".ic-interests .ici-area input::-ms-clear": { display: "none" },
-        ".ic-interests .ici-area input::-moz-selection": { background: "#05D1C4" },
-        ".ic-interests .ici-area input::selection": { background: "#05D1C4" },
+        ".ic-interests .ici-area input::-moz-selection": { background: "theme.100" },
+        ".ic-interests .ici-area input::selection": { background: "theme.100" },
         ".ic-interests .ici-area span": {
-          background: "#05D1C4",
+          background: "theme.100",
           borderRadius: "6px",
-          color: "#1b2229",
+          color: "background.100",
           cursor: "pointer",
           display: "inline-block",
           WebkitBoxFlex: "1",
@@ -1359,7 +1372,7 @@ const theme = extendTheme({
           background: "#f4f4f4",
         },
         ".ic-interests .ici-available span.active::before,.ic-interests .ici-available span:hover::before": {
-          color: "#1b2229",
+          color: "background.100",
         },
         ".ic-interests .ici-available span:before": {
           content: '"\\e807"',
@@ -1394,7 +1407,7 @@ const theme = extendTheme({
         },
         "#app-loading": {
           display: "none",
-          background: "#1b2229",
+          background: "background.100",
           position: "absolute",
           top: "0",
           left: "0",
@@ -1475,7 +1488,7 @@ const theme = extendTheme({
           height: "7px",
         },
         ".infographic-wrapper section": { fontSize: "2.4vw", padding: "2em 0" },
-        ".infographic-wrapper section:nth-child(even)": {
+        ".infographic-wrapper section:nth-of-type(even)": {
           backgroundSize: "30vw",
           padding: "3em 0",
         },
@@ -1566,27 +1579,27 @@ const theme = extendTheme({
           zIndex: 5,
         },
         "main .sn-content p": { lineHeight: 1.375 },
-        "main.home-wrapper section:nth-child(1):before": {
+        "main.home-wrapper section:nth-of-type(1):before": {
           marginBottom: "4em",
           height: "4.4em",
         },
-        "main.home-wrapper section:nth-child(1) .container": {
+        "main.home-wrapper section:nth-of-type(1) .container": {
           paddingTop: "4.2em",
         },
-        "main.home-wrapper section:nth-child(1) .sn-img": {
+        "main.home-wrapper section:nth-of-type(1) .sn-img": {
           WebkitTransform: "translateY(15%)",
           transform: "translateY(15%)",
         },
-        "main.home-wrapper section:nth-child(3)": { marginTop: "-1.6em" },
-        "main.home-wrapper section:nth-child(4) .container h3": {
+        "main.home-wrapper section:nth-of-type(3)": { marginTop: "-1.6em" },
+        "main.home-wrapper section:nth-of-type(4) .container h3": {
           textAlign: "center",
         },
-        "main.home-wrapper section:nth-child(5) .container h3": {
+        "main.home-wrapper section:nth-of-type(5) .container h3": {
           marginBottom: "0.75em",
         },
-        "main.home-wrapper section:nth-child(5) .sn-img": { maxWidth: "10em" },
+        "main.home-wrapper section:nth-of-type(5) .sn-img": { maxWidth: "10em" },
         "main.modern-wrapper section": { padding: "9.5em 0 8.5em" },
-        "main.modern-wrapper section:nth-child(1)": { marginTop: "10em" },
+        "main.modern-wrapper section:nth-of-type(1)": { marginTop: "10em" },
         "main.modern-wrapper section.sn-square": {
           marginTop: "0",
           paddingTop: "2em",
@@ -1659,11 +1672,11 @@ const theme = extendTheme({
         ".head-count": { fontSize: "13px" },
         ".head-toggle": { height: "22px", width: "28px" },
         ".head-toggle span": { height: "4px", width: "100%" },
-        ".head-toggle span:nth-child(1)": { top: "0px" },
-        ".head-toggle span:nth-child(2),.head-toggle span:nth-child(3)": {
+        ".head-toggle span:nth-of-type(1)": { top: "0px" },
+        ".head-toggle span:nth-of-type(2),.head-toggle span:nth-of-type(3)": {
           top: "9px",
         },
-        ".head-toggle span:nth-child(4)": { top: "18px" },
+        ".head-toggle span:nth-of-type(4)": { top: "18px" },
         ".head-mnu": { padding: "45px 15px 15px" },
         ".head-mnu:before": { backgroundSize: "40%", height: "46px" },
         ".head-mnu li a": { fontSize: "17px", padding: "17px 0" },
@@ -1708,8 +1721,8 @@ const theme = extendTheme({
         msFlexAlign: "end",
         alignItems: "flex-end",
       },
-      "main section:nth-child(even)": { background: "#1b2229" },
-      "main section:nth-child(even) .sn-content P": { color: "#fff" },
+      "main section:nth-of-type(even)": { background: "background.100" },
+      "main section:nth-of-type(even) .sn-content P": { color: "#fff" },
       "main section:last-child": { paddingBottom: "4em" },
       "main section .sn-img img": { position: "relative", zIndex: 1 },
       "main .container": {
@@ -1721,16 +1734,16 @@ const theme = extendTheme({
         position: "unset",
         width: "100%",
       },
-      "main .sn-content": { width: "100%" },
+      "main .sn-content": { width: "100%", paddingTop: "5%" },
       "main .sn-content h1, main .sn-content h2, main .sn-content h3": {
-        color: "#05D1C4",
+        color: "theme.100",
         fontSize: "1.9275em",
         fontWeight: 600,
         margin: "0 0 0.4em",
         lineHeight: 1.35,
       },
       "main .sn-content p": {
-        color: "#1b2229",
+        color: "background.100",
         fontSize: "1.25em",
         letterSpacing: "0.45px",
         lineHeight: 1.55,
@@ -1740,10 +1753,10 @@ const theme = extendTheme({
       "main .sn-content p a": { textDecoration: "none" },
       "main .sn-content p a:hover": { textDecoration: "underline" },
       "main .sn-content p+p": { marginTop: "45px" },
-      "main.home-wrapper section:nth-child(1)": { paddingTop: "0" },
-      "main.home-wrapper section:nth-child(1):before": {
+      "main.home-wrapper section:nth-of-type(1)": { paddingTop: "0" },
+      "main.home-wrapper section:nth-of-type(1):before": {
         content: '""',
-        background: "#1b2229",
+        background: "background.100",
         display: "block",
         marginBottom: "65px",
         height: "85px",
@@ -1802,7 +1815,7 @@ const theme = extendTheme({
       "main.modern-wrapper .sn-list ul li em": {
         background: "#42E9DF",
         borderRadius: "50%",
-        color: "#1b2229",
+        color: "background.100",
         fontSize: "1.5em",
         lineHeight: "1.6em",
         marginRight: "0.725em",
@@ -1813,7 +1826,7 @@ const theme = extendTheme({
       ".ip-notification": {
         background: "#efefef",
         borderRadius: "4px",
-        borderLeft: "10px solid #05d1c4",
+        borderLeft: "10px solid theme.100",
         marginBottom: "30px",
         padding: "20px 30px",
       },
@@ -1870,7 +1883,7 @@ const theme = extendTheme({
         padding: "10px 20px",
         textDecoration: "none",
       },
-      "footer nav li a:hover": { color: "#05D1C4" },
+      "footer nav li a:hover": { color: "theme.100" },
       "footer nav li:focus, footer nav li:hover": {
         background: "transparent",
         color: "#049f95",
@@ -1883,7 +1896,7 @@ const theme = extendTheme({
         WebkitTransition: "all .25s ease",
         transition: "all .25s ease",
       },
-      ".footer-langs span:hover": { color: "#05D1C4" },
+      ".footer-langs span:hover": { color: "theme.100" },
       ".footer-langs span:before": {
         content: "''",
         background: "url(assets/img/lang-icon.svg) no-repeat",
@@ -1936,7 +1949,7 @@ const theme = extendTheme({
       },
       ".fl-list ul li.fll-close:after, .fl-list ul li.fll-close:before": {
         content: "''",
-        background: "#1b2229",
+        background: "background.100",
         marginTop: "-1px",
         position: "absolute",
         top: "50%",
@@ -1957,29 +1970,29 @@ const theme = extendTheme({
       },
       ".fl-list ul li.fll-chse": {
         fontSize: "21px",
-        color: "#05D1C4",
+        color: "theme.100",
         paddingBottom: "10px",
         textShadow: "0 0",
       },
       ".fl-list ul li:last-child": { borderBottom: "0" },
       ".fl-list ul li a": {
-        color: "#1b2229",
+        color: "background.100",
         display: "block",
         fontSize: "17px",
         letterSpacing: "0.25px",
         padding: "10px 0",
         textDecoration: "none",
       },
-      ".fl-list ul li a:hover": { color: "#05D1C4", fontWeight: 600 },
+      ".fl-list ul li a:hover": { color: "theme.100", fontWeight: 600 },
       ".fl-list ul li .active": {
-        color: "#1b2229",
+        color: "background.100",
         cursor: "default",
         fontWeight: 600,
       },
-      ".fl-list ul li .active:hover": { color: "#1b2229" },
+      ".fl-list ul li .active:hover": { color: "background.100" },
       ".fl-list ul li .active:after": {
         content: "'\\e802'",
-        color: "#05D1C4",
+        color: "theme.100",
         fontSize: "17px",
         fontFamily: "CamgoIcons",
         fontWeight: 400,
@@ -2133,38 +2146,38 @@ const theme = extendTheme({
         },
         "main .sn-img.md-img": { minWidth: "265px" },
         "main .sn-img.lg-img": { minWidth: "315px", marginRight: "30px" },
-        "main section:nth-child(even) .container": {
+        "main section:nth-of-type(even) .container": {
           WebkitBoxOrient: "horizontal",
           WebkitBoxDirection: "reverse",
           msFlexDirection: "row-reverse",
           flexDirection: "row-reverse",
         },
-        "main section:nth-child(even) .sn-img": {
+        "main section:nth-of-type(even) .sn-img": {
           marginLeft: "60px",
           marginRight: "0",
         },
-        "main section:nth-child(even) .sn-img.lg-img": {
+        "main section:nth-of-type(even) .sn-img.lg-img": {
           marginRight: "0",
           marginLeft: "60px",
         },
-        "main.home-wrapper section:nth-child(1)": { paddingBottom: "120px" },
-        "main.home-wrapper section:nth-child(1) .sn-img": {
+        "main.home-wrapper section:nth-of-type(1)": { paddingBottom: "120px" },
+        "main.home-wrapper section:nth-of-type(1) .sn-img": {
           minWidth: "300px",
           marginRight: "45px",
         },
-        "main.home-wrapper section:nth-child(2)": { paddingBottom: "125px" },
-        "main.home-wrapper section:nth-child(2) .sn-img": { marginTop: "55px" },
-        "main.home-wrapper section:nth-child(3) .sn-img": { marginTop: "10px" },
-        "main.home-wrapper section:nth-child(4)": { padding: "120px 0 135px" },
-        "main.home-wrapper section:nth-child(4) .sn-img": { minWidth: "260px" },
-        "main.home-wrapper section:nth-child(5)": { paddingTop: "95px" },
-        "main.home-wrapper section:nth-child(5) .sn-img": { marginRight: "75px" },
-        "main.home-wrapper section:nth-child(6)": { paddingTop: "120px" },
-        "main.home-wrapper section:nth-child(6) .sn-img": { marginTop: "20px" },
+        "main.home-wrapper section:nth-of-type(2)": { paddingBottom: "125px" },
+        "main.home-wrapper section:nth-of-type(2) .sn-img": { marginTop: "55px" },
+        "main.home-wrapper section:nth-of-type(3) .sn-img": { marginTop: "10px" },
+        "main.home-wrapper section:nth-of-type(4)": { padding: "120px 0 135px" },
+        "main.home-wrapper section:nth-of-type(4) .sn-img": { minWidth: "260px" },
+        "main.home-wrapper section:nth-of-type(5)": { paddingTop: "95px" },
+        "main.home-wrapper section:nth-of-type(5) .sn-img": { marginRight: "75px" },
+        "main.home-wrapper section:nth-of-type(6)": { paddingTop: "120px" },
+        "main.home-wrapper section:nth-of-type(6) .sn-img": { marginTop: "20px" },
         "main.modern-wrapper section": { padding: "55px 0 90px" },
-        "main.modern-wrapper section:nth-child(1) .sn-img": { marginTop: "75px" },
-        "main.modern-wrapper section:nth-child(even)": { overflow: "hidden" },
-        "main.modern-wrapper section:nth-child(even) .sn-img:before": {
+        "main.modern-wrapper section:nth-of-type(1) .sn-img": { marginTop: "75px" },
+        "main.modern-wrapper section:nth-of-type(even)": { overflow: "hidden" },
+        "main.modern-wrapper section:nth-of-type(even) .sn-img:before": {
           content: '""',
           background: "url(assets/img/dots-bg.svg) no-repeat",
           position: "absolute",
@@ -2194,10 +2207,10 @@ const theme = extendTheme({
           position: "relative",
           zIndex: 1,
         },
-        "main.modern-wrapper section.sn-square ul li:nth-child(even)": {
+        "main.modern-wrapper section.sn-square ul li:nth-of-type(even)": {
           paddingLeft: "1.85em",
         },
-        "main.modern-wrapper section.sn-square ul li:nth-child(even)::before": {
+        "main.modern-wrapper section.sn-square ul li:nth-of-type(even)::before": {
           content: '""',
           background: [
             "-webkit-gradient(linear, left top, left bottom, color-stop(50%, #c7c7c7), color-stop(0%, rgba(255, 255, 255, 0))) left/4px 18px repeat-y",
@@ -2209,14 +2222,14 @@ const theme = extendTheme({
           height: "100%",
           width: "4px",
         },
-        "main.modern-wrapper section.sn-square ul li:nth-child(odd)": {
+        "main.modern-wrapper section.sn-square ul li:nth-of-type(odd)": {
           paddingRight: "1.85em",
         },
-        "main.modern-wrapper section.sn-square ul li:nth-child(1),main.modern-wrapper section.sn-square ul li:nth-child(2)":
+        "main.modern-wrapper section.sn-square ul li:nth-of-type(1),main.modern-wrapper section.sn-square ul li:nth-of-type(2)":
           {
             paddingBottom: "4.25em",
           },
-        "main.modern-wrapper section.sn-square ul li:nth-child(3)::after,main.modern-wrapper section.sn-square ul li:nth-child(4)::after":
+        "main.modern-wrapper section.sn-square ul li:nth-of-type(3)::after,main.modern-wrapper section.sn-square ul li:nth-of-type(4)::after":
           {
             content: '""',
             background: [
@@ -2237,7 +2250,7 @@ const theme = extendTheme({
       },
       ".inner-page": {
         borderRadius: "5px",
-        color: "#1b2229",
+        color: "background.100",
         margin: "30px auto 100px",
       },
       ".inner-page .jumbotron": {
@@ -2246,7 +2259,7 @@ const theme = extendTheme({
         padding: "20px 0",
       },
       ".inner-page .jumbotron h1": {
-        color: "#05D1C4",
+        color: "theme.100",
         fontSize: "50px",
         margin: "0 0 3px",
       },
@@ -2264,14 +2277,14 @@ const theme = extendTheme({
       },
       ".inner-page .ipc-colored-title": {
         borderTop: "1px solid #bfbfbf",
-        color: "#05D1C4",
+        color: "theme.100",
         fontSize: "40px",
         textTransform: "capitalize",
         paddingTop: "40px",
       },
       ".inner-page p": { fontSize: "16px", margin: "5px 0 10px" },
       ".inner-page a": {
-        color: "#05D1C4",
+        color: "theme.100",
         WebkitTransition: "all 0.25s ease",
         transition: "all 0.25s ease",
       },
@@ -2289,7 +2302,7 @@ const theme = extendTheme({
       },
       ".inner-page ul li:before": {
         content: '""',
-        border: "2px solid #05d1c4",
+        border: "2px solid theme.100",
         borderRadius: "50%",
         position: "absolute",
         left: "-12px",
@@ -2493,11 +2506,11 @@ const theme = extendTheme({
         ".head-mnu li .get-plus": { fontSize: "15px", margin: "15px 0 0" },
         ".head-toggle": { height: "22px", width: "28px" },
         ".head-toggle span": { height: "4px", width: "100%" },
-        ".head-toggle span:nth-child(1)": { top: "0px" },
-        ".head-toggle span:nth-child(2),.head-toggle span:nth-child(3)": {
+        ".head-toggle span:nth-of-type(1)": { top: "0px" },
+        ".head-toggle span:nth-of-type(2),.head-toggle span:nth-of-type(3)": {
           top: "9px",
         },
-        ".head-toggle span:nth-child(4)": { top: "18px" },
+        ".head-toggle span:nth-of-type(4)": { top: "18px" },
       },
       "@media only screen and (min-width: 481px)": {
         ".head-logo img": { minHeight: "47px" },

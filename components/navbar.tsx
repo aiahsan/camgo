@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Link, Image, UnorderedList, ListItem } from "@chakra-ui/react";
-
+import { Box, Link, Image, UnorderedList, ListItem, Text } from "@chakra-ui/react";
+import { BiUserCircle } from "react-icons/bi";
 export default function Navbar() {
   const [showNav, setShowNav] = React.useState(false);
   return (
@@ -10,7 +10,7 @@ export default function Navbar() {
           <Box className="container-fluid">
             <Box className="head-logo">
               <Link href="index.htm" title="CamGo">
-                <img src="assets/img/logo.svg?v1.0" alt="CamGo" title="CamGo" />
+                <Image src="assets/img/logo.svg?v1.0" alt="CamGo" title="CamGo" />
               </Link>
             </Box>
             <UnorderedList className="head-mnu">
@@ -18,23 +18,23 @@ export default function Navbar() {
                 <Link href="index.htm">Home</Link>
               </ListItem>
               <ListItem>
-                <Link href="why-camgo/index.htm">Why Camgo</Link>
+                <Link href="why">Why Camgo</Link>
               </ListItem>
               <ListItem>
-                <Link href="about/index.htm">About</Link>
+                <Link href="about">About</Link>
               </ListItem>
               <ListItem>
-                <Link href="socially-distanced-dating-stats/index.htm">Chat Stats</Link>
+                <Link href="distance">Chat Stats</Link>
               </ListItem>
               <ListItem>
-                <p className="get-plus">
+                <Text className="get-plus">
                   <span>Get Camgo</span> <em>Plus</em>
-                </p>
+                </Text>
               </ListItem>
               <ListItem>
-                <p className="report-bug trns">
+                <Text className="report-bug trns">
                   <em className="ci ci-bug"></em>Report bugs
-                </p>
+                </Text>
               </ListItem>
             </UnorderedList>
             <Box className="head-count">

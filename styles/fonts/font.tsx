@@ -40,7 +40,7 @@ const Fonts = () => (
 	font-family: CamgoIcons;
 	font-display: block;
 	src: url("/font/camgo-icons.eot");
-	src: url("../font/camgo-icons.eot") format("embedded-opentype"), url("../font/camgo-icons.woff2.txt") format("woff2"), url("../font/camgo-icons.woff.txt") format("woff"), url("../font/camgo-icons.ttf.txt") format("truetype"), url("../font/camgo-icons.svg") format("svg");
+	src: url("/font/camgo-icons.eot") format("embedded-opentype"), url("/font/camgo-icons.woff2") format("woff2"), url("/font/camgo-icons.woff") format("woff"), url("/font/camgo-icons.ttf") format("truetype"), url("/font/camgo-icons.svg") format("svg");
 	font-weight: 400;
 	font-style: normal
 }
@@ -897,7 +897,7 @@ const Fonts = () => (
 	animation-name: zoomIn
 }
 
-ci {
+.ci {
 	display: inline-block;
 	font: normal normal normal 14px/1 CamgoIcons;
 	font-size: inherit;
@@ -934,227 +934,227 @@ ci {
 }
 
 .ci-heart-o:before {
-	content: '\e800'
+	content: '\\e800'
 }
 
 .ci-right-circled:before {
-	content: '\e801'
+	content: '\\e801'
 }
 
 .ci-check:before {
-	content: '\e802'
+	content: '\\e802'
 }
 
 .ci-disconnect:before {
-	content: '\e803'
+	content: '\\e803'
 }
 
 .ci-camera:before {
-	content: '\e804'
+	content: '\\e804'
 }
 
 .ci-cog:before {
-	content: '\e805'
+	content: '\\e805'
 }
 
 .ci-chat:before {
-	content: '\e806'
+	content: '\\e806'
 }
 
 .ci-loop:before {
-	content: '\e807'
+	content: '\\e807'
 }
 
 .ci-cross-circle:before {
-	content: '\e808'
+	content: '\\e808'
 }
 
 .ci-arrow-light:before {
-	content: '\e809'
+	content: '\\e809'
 }
 
 .ci-message:before {
-	content: '\e80a'
+	content: '\\e80a'
 }
 
 .ci-btn-badge:before {
-	content: '\e80b'
+	content: '\\e80b'
 }
 
 .ci-envelope:before {
-	content: '\e80c'
+	content: '\\e80c'
 }
 
 .ci-question:before {
-	content: '\e80d'
+	content: '\\e80d'
 }
 
 .ci-random:before {
-	content: '\e80e'
+	content: '\\e80e'
 }
 
 .ci-report:before {
-	content: '\e80f'
+	content: '\\e80f'
 }
 
 .ci-smile:before {
-	content: '\e810'
+	content: '\\e810'
 }
 
 .ci-lock:before {
-	content: '\e811'
+	content: '\\e811'
 }
 
 .ci-plus-circle:before {
-	content: '\e812'
+	content: '\\e812'
 }
 
 .ci-stop:before {
-	content: '\e813'
+	content: '\\e813'
 }
 
 .ci-heart:before {
-	content: '\e814'
+	content: '\\e814'
 }
 
 .ci-user:before {
-	content: '\e815'
+	content: '\\e815'
 }
 
 .ci-play-circled:before {
-	content: '\e816'
+	content: '\\e816'
 }
 
 .ci-volume:before {
-	content: '\e817'
+	content: '\\e817'
 }
 
 .ci-resize-full:before {
-	content: '\e818'
+	content: '\\e818'
 }
 
 .ci-resize-normal:before {
-	content: '\e819'
+	content: '\\e819'
 }
 
 .ci-rotate-cam:before {
-	content: '\e81a'
+	content: '\\e81a'
 }
 
 .ci-arrow-bottom:before {
-	content: '\e81b'
+	content: '\\e81b'
 }
 
 .ci-mars:before {
-	content: '\e81c'
+	content: '\\e81c'
 }
 
 .ci-venus:before {
-	content: '\e81d'
+	content: '\\e81d'
 }
 
 .ci-mask:before {
-	content: '\e81e'
+	content: '\\e81e'
 }
 
 .ci-foreign:before {
-	content: '\e81f'
+	content: '\\e81f'
 }
 
 .ci-click:before {
-	content: '\e820'
+	content: '\\e820'
 }
 
 .ci-vertical-dots:before {
-	content: '\e821'
+	content: '\\e821'
 }
 
 .ci-info:before {
-	content: '\e822'
+	content: '\\e822'
 }
 
 .ci-connect-1:before {
-	content: '\e823'
+	content: '\\e823'
 }
 
 .ci-unisex:before {
-	content: '\e824'
+	content: '\\e824'
 }
 
 .ci-friends:before {
-	content: '\e825'
+	content: '\\e825'
 }
 
 .ci-save-badge:before {
-	content: '\e826'
+	content: '\\e826'
 }
 
 .ci-clock:before {
-	content: '\e827'
+	content: '\\e827'
 }
 
 .ci-right-arrow:before {
-	content: '\e828'
+	content: '\\e828'
 }
 
 .ci-emoji:before {
-	content: '\e82b'
+	content: '\\e82b'
 }
 
 .ci-gif:before {
-	content: '\e82c'
+	content: '\\e82c'
 }
 
 .ci-bug:before {
-	content: '\e851'
+	content: '\\e851'
 }
 
 .ci-transgender-icon:before {
-	content: '\e880'
+	content: '\\e880'
 }
 
 .ci-location-hidden:before {
-	content: '\e881'
+	content: '\\e881'
 }
 
 .ci-ok:before {
-	content: '\e882'
+	content: '\\e882'
 }
 
 .ci-cancel:before {
-	content: '\e883'
+	content: '\\e883'
 }
 
 .ci-twitter:before {
-	content: '\f099'
+	content: '\\f099'
 }
 
 .ci-facebook:before {
-	content: '\f09a'
+	content: '\\f09a'
 }
 
 .ci-angle-left:before {
-	content: '\f104'
+	content: '\\f104'
 }
 
 .ci-angle-right:before {
-	content: '\f105'
+	content: '\\f105'
 }
 
 .ci-spinner:before {
-	content: '\f110'
+	content: '\\f110'
 }
 
 .ci-mic:before {
-	content: '\f130'
+	content: '\\f130'
 }
 
 .ci-youtube-play:before {
-	content: '\f16a'
+	content: '\\f16a'
 }
 
 .ci-instagram:before {
-	content: '\f16d'
+	content: '\\f16d'
 }
 
  `}
